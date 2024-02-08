@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* Общие стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+    }
+
+    /* Стили для корзины */
+    #cart-container {
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item img {
+      margin-right: 10px;
+    }
+    .item button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .item button:hover {
+      background-color: #45a049;
+    }
+    .item input[type="number"] {
+      width: 50px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .item p span {
+      font-weight: bold;
+    }
+    .item:last-child {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <!-- Элементы для управления корзиной -->
+  <div id="cart-container">
+    <!-- Товар 1 -->
+    <div class="item">
+      <img src="images/product1.jpg" alt="Товар 1" width="100">
+      <button onclick="addItemToCart('Товар 1', 10, 1)">Добавить товар 1</button>
+      <input type="number" id="quantity1" value="1">
+    </div>
+
+    <!-- Товар 2 -->
+    <div class="item">
+      <img src="images/product2.jpg" alt="Товар 2" width="100">
+      <button onclick="addItemToCart('Товар 2', 20, 1)">Добавить товар 2</button>
+      <input type="number" id="quantity2" value="1">
+    </div>
+
+    <!-- Кнопки для расчета общей стоимости и очистки корзины -->
+    <div class="item">
+      <button onclick="calculateTotal()">Рассчитать общую стоимость</button>
+      <button onclick="clearCart()">Очистить корзину</button>
+    </div>
+
+    <!-- Вывод общей стоимости -->
+    <div class="item">
+      <p>Общая стоимость: <span id="total"></span></p>
+    </div>
+  </div>
+
+  <script>
+    // Создаем объект корзины покупок и функции управления корзиной из предыдущих примеров
+  </script>
+</body>
+</html>
